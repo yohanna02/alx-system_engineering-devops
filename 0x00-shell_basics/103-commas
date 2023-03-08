@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lpa --group-directories-first | sort -k1.1n -k1.2 | tr '\n' ',' | sed 's/,$/\n/'
+ls -pa --group-directories-first | sort -k1.1n -k1.2 | tr '\n' ',' | sed 's/,$/\n/'
