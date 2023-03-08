@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -paF | sort -k1.1n -k1 | tr '\n' ',' | sed 's/,/, /g' | sed 's/, $/\n/'
+ls -1pAFa | sort -k1.1n -k1 | awk '{if (NR!=1) {ORS=", ";} else {ORS="";}; print $0}' | sed 's/..$/\n/'
